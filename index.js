@@ -12,7 +12,7 @@
  * The following code is demonstrating a way of completing this task
  * It returns the string `foofoo`
 */
-// fair enough. 2nd pass
+
 function processFirstItem(stringList, callback) {
   return callback(stringList[0])
 }
@@ -28,11 +28,15 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
+  counter 1 sets it's count variable to block scope which would reset it to 0 on use.
   
   2. Which of the two uses a closure? How can you tell?
-  
+  counter 1 uses closure on " return count++; where it reaches upand out into countermaker's let count"
+
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+  counter1 would work if all the data and input required could also be housed inside the function. counter 2 is useful when that data can be manually placed number by number
+
 */
 
 // counter1 code
